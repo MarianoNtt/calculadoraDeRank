@@ -1,0 +1,44 @@
+/*
+Insira os dados nas variáveis "let derrotas" para definir as derrotas e em "let vitorias" para definir as vitórias. Depois irá receber 
+o saldo de vitórias e o ranking de seu Herói.
+*/
+
+        let derrotas = 10
+        let vitorias = 45
+
+    let ranking = saldo(vitorias - derrotas)
+
+
+function saldo(saldoVitorias = "Indefinido") {
+    
+
+    switch (true) {
+        case saldoVitorias <= 10:
+            rank = "Ferro";
+            break;
+        case saldoVitorias >= 11 && saldoVitorias <= 20:
+            rank = "Bronze";
+            break;
+        case saldoVitorias >= 21 && saldoVitorias <= 30:
+            rank = "Prata";
+            break;
+        case saldoVitorias >= 31 && saldoVitorias <= 40:
+            rank = "Ouro";
+            break;
+        case saldoVitorias >= 41 && saldoVitorias <= 50:
+            rank = "Diamante";
+            break;
+        case saldoVitorias >= 51 && saldoVitorias <= 60:
+            rank = "Lendário";
+            break; 
+        case saldoVitorias >= 61 && saldoVitorias <= 70:
+            rank = "Imortal";
+            break; 
+        default:
+            rank = "Imortal"
+    }
+
+    console.log(`O Herói tem saldo de ${saldoVitorias} e está no nível de ${rank}`)
+}
+
+
